@@ -1,0 +1,14 @@
+@import "tailwindcss";
+
+body{
+  font-family: 'Poppins', sans-serif;
+  background: #f8ece7;
+}
+
+.title-font{
+  font-family: 'Great Vibes', cursive;
+}
+
+.heading-font{
+  font-family: 'Cormorant Garamond', serif;
+}
