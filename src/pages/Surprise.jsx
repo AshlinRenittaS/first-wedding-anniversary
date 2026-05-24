@@ -1,10 +1,14 @@
 import React from "react";
+import Navbar from "../components/Navbar";
+
 
 const Surprise = () => {
   return (
-    <div>
-      <h1>Surprise Page</h1>
+    <>
+    <div className="relative z-20">
+        <Navbar />
     </div>
+    </>
   );
 };
 
