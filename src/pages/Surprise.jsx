@@ -1,12 +1,10 @@
 import { useState } from "react";
-
 import Navbar from "../components/Navbar";
 
 import {
   Lock,
   Unlock,
   Heart,
-  Play,
 } from "lucide-react";
 
 const Surprise = () => {
@@ -27,7 +25,7 @@ const Surprise = () => {
 
     <div className="min-h-screen bg-[#f8ece7] overflow-hidden relative">
 
-      {/* Background Glow */}
+      {/* Background Blur */}
       <div className="absolute inset-0 overflow-hidden">
 
         <div className="absolute top-0 left-0 w-[400px] h-[400px] bg-pink-200/20 rounded-full blur-3xl"></div>
@@ -41,17 +39,43 @@ const Surprise = () => {
       </div>
 
       {/* Main */}
-      <div className="relative z-10 min-h-screen flex items-center justify-center px-5 py-28">
+      {/* <div className="relative z-10 min-h-screen flex items-center justify-center px-4 py-24"> */}
+      <div className="relative z-10 min-h-screen flex items-center justify-center px-4 pt-32 pb-20">
 
         {!isUnlocked ? (
 
-          /* LOCK PAGE */
-          <div className="w-full max-w-md bg-white/60 backdrop-blur-xl rounded-[40px] border border-white/40 shadow-2xl p-10 text-center">
+          /* LOCK SCREEN */
+          <div
+            className="
+              w-full
+              max-w-md
+              bg-white/60
+              backdrop-blur-xl
+              rounded-[40px]
+              border
+              border-white/40
+              shadow-2xl
+              p-8
+              md:p-10
+              text-center
+            "
+          >
 
-            {/* Lock */}
+            {/* Lock Icon */}
             <div className="flex justify-center">
 
-              <div className="w-24 h-24 rounded-full bg-[#7a1020] flex items-center justify-center shadow-2xl">
+              <div
+                className="
+                  w-24
+                  h-24
+                  rounded-full
+                  bg-[#7a1020]
+                  flex
+                  items-center
+                  justify-center
+                  shadow-2xl
+                "
+              >
 
                 <Lock
                   size={40}
@@ -61,11 +85,26 @@ const Surprise = () => {
             </div>
 
             {/* Heading */}
-            <h1 className="mt-8 title-font text-5xl text-[#7a1020]">
+            <h1
+              className="
+                mt-8
+                title-font
+                text-5xl
+                text-[#7a1020]
+              "
+            >
               Surprise
             </h1>
 
-            <p className="mt-4 text-[#5c3b3b] heading-font leading-8">
+            {/* Text */}
+            <p
+              className="
+                mt-4
+                text-[#5c3b3b]
+                heading-font
+                leading-8
+              "
+            >
               Enter our special date
               <br />
               to unlock your surprise ♡
@@ -135,13 +174,21 @@ const Surprise = () => {
 
         ) : (
 
-          /* UNLOCKED PAGE */
+          /* VIDEO PAGE */
           <div className="w-full max-w-4xl">
 
             {/* Heading */}
             <div className="text-center">
 
-              <h1 className="title-font text-5xl md:text-7xl text-[#7a1020] leading-tight">
+              <h1
+                className="
+                  title-font
+                  text-[#7a1020]
+                  leading-tight
+                  text-4xl
+                  md:text-6xl
+                "
+              >
                 A Little Surprise
                 <br />
                 For My Love
@@ -160,51 +207,58 @@ const Surprise = () => {
                 <div className="w-16 h-[1px] bg-[#7a1020]/30"></div>
               </div>
             </div>
+<div
+  className="
+    mt-10
+    bg-white/60
+    backdrop-blur-xl
+    rounded-[35px]
+    p-3
+    md:p-5
+    border
+    border-white/40
+    shadow-2xl
+  "
+>
+  <div className="overflow-hidden rounded-[28px]">
 
-            {/* Video Card */}
-            <div className="mt-12 bg-white/60 backdrop-blur-xl rounded-[35px] p-4 md:p-6 border border-white/40 shadow-2xl">
+    <video
+      controls
+      playsInline
+      preload="auto"
+      className="
+        w-full
+        h-auto
+        max-h-[70vh]
+        rounded-[28px]
+        bg-black
+      "
+    >
+      <source
+        src="/video/surprise.mp4"
+        type="video/mp4"
+      />
 
-              <div className="relative overflow-hidden rounded-[28px]">
+      Your browser does not support the video tag.
+    </video>
 
-                {/* VIDEO */}
-                <video
-                  controls
-                  className="
-                    w-full
-                    h-full
-                    rounded-[28px]
-                    object-cover
-                    bg-black
-                  "
-                >
-                  <source
-                    src="/video.mp4"
-                    type="video/mp4"
-                  />
-                </video>
-
-                {/* Play Button */}
-                <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-
-                  <div className="w-24 h-24 rounded-full bg-[#b31235]/90 flex items-center justify-center shadow-2xl">
-
-                    <Play
-                      size={42}
-                      className="text-white fill-white ml-1"
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-
+  </div>
+</div>
             {/* Bottom Text */}
             <div className="text-center mt-10">
 
-              <p className="text-[#5c3b3b] text-2xl md:text-3xl heading-font leading-relaxed">
-
-                I made this just for you, my love ❤️
+              <p
+                className="
+                  text-[#5c3b3b]
+                  heading-font
+                  leading-relaxed
+                  text-xl
+                  md:text-3xl
+                "
+              >
+                I made this just for you ❤️
                 <br />
-                Happy Anniversary!
+                Happy Anniversary My Love ♡
               </p>
             </div>
           </div>
