@@ -1,19 +1,15 @@
 import Navbar from "../components/Navbar";
 
-import {
-  Heart,
-} from "lucide-react";
+import { Heart } from "lucide-react";
 
 /* BACKGROUND IMAGE */
 import foreverBg from "../assets/forever.png";
 
 const Forever = () => {
-
   return (
+    <div className="min-h-[100svh] overflow-hidden relative bg-[#f8ece7]">
 
-    <div className="min-h-screen bg-[#f8ece7] overflow-hidden relative">
-
-      {/* Full Background */}
+      {/* Background Image */}
       <img
         src={foreverBg}
         alt=""
@@ -23,10 +19,12 @@ const Forever = () => {
           w-full
           h-full
           object-cover
+          object-center
+          md:object-top
         "
       />
 
-      {/* Overlay */}
+      {/* Soft Overlay */}
       <div className="absolute inset-0 bg-white/10"></div>
 
       {/* Navbar */}
@@ -34,20 +32,20 @@ const Forever = () => {
         <Navbar />
       </div>
 
-      {/* Main */}
+      {/* Main Content */}
       <div
         className="
           relative
           z-10
-          min-h-screen
+          min-h-[100svh]
           flex
           flex-col
           items-center
-          justify-center
           text-center
           px-5
           md:px-10
-          pt-32
+          pt-24
+          md:pt-32
           pb-16
         "
       >
@@ -57,49 +55,77 @@ const Forever = () => {
           className="
             title-font
             text-[#7a1020]
-            text-4xl
-            md:text-7xl
+            text-3xl
+            md:text-6xl
           "
         >
           Forever & Always
         </h1>
 
         {/* Divider */}
-        <div className="flex items-center gap-3 mt-5">
+        <div className="flex items-center gap-3 mt-4">
 
-          <div className="w-16 md:w-24 h-[1px] bg-[#7a1020]/30"></div>
+          <div className="w-14 md:w-24 h-[1px] bg-[#7a1020]/30"></div>
 
           <Heart
             size={16}
             className="fill-[#7a1020] text-[#7a1020]"
           />
 
-          <div className="w-16 md:w-24 h-[1px] bg-[#7a1020]/30"></div>
+          <div className="w-14 md:w-24 h-[1px] bg-[#7a1020]/30"></div>
         </div>
 
-        {/* Heart Text */}
-        <div className="mt-20 md:mt-28">
+        {/* HEART TEXT SECTION */}
+        <div
+          className="
+            relative
+            mt-16
+            md:mt-24
+            flex
+            items-center
+            justify-center
+            w-full
+          "
+        >
 
-          <h2
+          <div
             className="
-              title-font
-              text-[#7a1020]
-              text-6xl
-              md:text-[120px]
-              leading-tight
+              relative
+              flex
+              items-center
+              justify-center
+              w-full
+              max-w-[900px]
+              h-[260px]
+              md:h-[520px]
             "
           >
-            You are
-            <br />
-            my home
-          </h2>
+
+            {/* TEXT INSIDE HEART */}
+            <h2
+              className="
+                title-font
+                text-[#7a1020]
+                text-5xl
+                sm:text-6xl
+                md:text-[120px]
+                leading-tight
+                text-center
+                z-10
+              "
+            >
+              You are
+              <br />
+              my home
+            </h2>
+          </div>
         </div>
 
         {/* Description */}
         <p
           className="
-            mt-14
-            md:mt-20
+            mt-10
+            md:mt-16
             text-[#5c3b3b]
             text-base
             md:text-2xl

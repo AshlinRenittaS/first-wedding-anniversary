@@ -53,29 +53,32 @@ const Letter = () => {
         <div className="pt-32 px-5 md:px-20 pb-20">
 
           {/* Heading */}
+
+        {unlocked && (
           <div className="text-center">
 
-            <p className="title-font text-5xl md:text-7xl text-[#7a1020]">
-              A Letter For You
-            </p>
+              <p className="title-font text-5xl md:text-7xl text-[#7a1020]">
+                 A Letter For You
+              </p>
 
-            <p className="mt-4 text-[#5c3b3b] text-lg md:text-xl heading-font">
-              Written with endless love ♡
-            </p>
+              <p className="mt-4 text-[#5c3b3b] text-lg md:text-xl heading-font">
+                   Written with endless love ♡
+              </p>
 
-            {/* Divider */}
-            <div className="flex items-center justify-center gap-4 mt-6">
+                {/* Divider */}
+              <div className="flex items-center justify-center gap-4 mt-6">
 
-              <div className="w-20 h-[1px] bg-[#7a1020]/30"></div>
+                <div className="w-20 h-[1px] bg-[#7a1020]/30"></div>
 
-              <Heart
-                size={18}
-                className="fill-[#7a1020] text-[#7a1020]"
-              />
+                    <Heart
+                      size={18}
+                      className="fill-[#7a1020] text-[#7a1020]"
+                    />
 
-              <div className="w-20 h-[1px] bg-[#7a1020]/30"></div>
+                <div className="w-20 h-[1px] bg-[#7a1020]/30"></div>
             </div>
           </div>
+        )}
 
           {/* LOCK SCREEN */}
           {!unlocked ? (
