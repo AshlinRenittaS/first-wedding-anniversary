@@ -53,32 +53,31 @@ const Letter = () => {
         <div className="pt-32 px-5 md:px-20 pb-20">
 
           {/* Heading */}
-
-        {unlocked && (
-          <div className="text-center">
+          {unlocked && (
+            <div className="text-center">
 
               <p className="title-font text-5xl md:text-7xl text-[#7a1020]">
-                 A Letter For You
+                A Letter For You
               </p>
 
               <p className="mt-4 text-[#5c3b3b] text-lg md:text-xl heading-font">
-                   Written with endless love ♡
+                Written with endless love ♡
               </p>
 
-                {/* Divider */}
+              {/* Divider */}
               <div className="flex items-center justify-center gap-4 mt-6">
 
                 <div className="w-20 h-[1px] bg-[#7a1020]/30"></div>
 
-                    <Heart
-                      size={18}
-                      className="fill-[#7a1020] text-[#7a1020]"
-                    />
+                <Heart
+                  size={18}
+                  className="fill-[#7a1020] text-[#7a1020]"
+                />
 
                 <div className="w-20 h-[1px] bg-[#7a1020]/30"></div>
+              </div>
             </div>
-          </div>
-        )}
+          )}
 
           {/* LOCK SCREEN */}
           {!unlocked ? (
@@ -188,7 +187,7 @@ const Letter = () => {
                     <div className="text-center">
 
                       <h1 className="title-font text-5xl md:text-7xl text-[#7a1020]">
-                            Forever & Always ♡
+                        Forever & Always ♡
                       </h1>
 
                       <div className="flex justify-center mt-5">
@@ -205,57 +204,47 @@ const Letter = () => {
 
                       <p className="heading-font text-[#5c3b3b] leading-[2.5rem] text-lg md:text-2xl">
 
-                        My Dearest Love,
+                        My dear love,
                         <br />
                         <br />
 
-                        Every single day with you feels
-                        like the most beautiful chapter
-                        of my life.
+                        It still feels like I saw you for the first time at our bride-seeing moment only yesterday… but already it’s been one year since we got married, thangoo.
 
                         <br />
                         <br />
 
-                        From our very first meeting
-                        to every smile, every hug,
-                        every little memory —
-                        you became my safest place
-                        and my forever happiness.
+                        In this one year, no matter how many fights I started, you adjusted everything and patiently did so many things for me with so much care, kd.
 
                         <br />
                         <br />
 
-                        Thank you for loving me,
-                        understanding me,
-                        supporting me,
-                        and standing beside me always.
+                        Ever since you came into my life, the first message I send after waking up is always to you, and the last person I talk to before sleeping is also you. Sometimes this long-distance relationship feels really hard, kd… but I keep hoping and believing that by God’s grace, one day we’ll get to stay together every day.
 
                         <br />
                         <br />
 
-                        You are not just my partner,
-                        you are my peace,
-                        my comfort,
-                        my strength,
-                        and my home.
+                        You are not just my husband; when I do something wrong, you correct me like a father, when I’m not feeling well, you take care of me like a mother, and when we laugh and talk happily, you become my best friend too.
 
                         <br />
                         <br />
 
-                        I promise to walk beside you
-                        through every season of life,
-                        holding your hand forever.
+                        Thank you, kd, for always staying with me no matter how much I fight with you. And yes… I’m really very possessive about you.
 
                         <br />
                         <br />
 
-                        No matter what happens,
-                        my heart will always belong to you.
+                        I really miss you, kd…
+                        Waiting for your tight hug.
 
                         <br />
                         <br />
 
-                        Forever & Always,
+                        I love you so much, thangooo.
+                        <br />
+
+                        Happy 1st Wedding Anniversary ❤️
+
+                        <br />
                         <br />
 
                         <span className="title-font text-4xl md:text-5xl text-[#7a1020]">
