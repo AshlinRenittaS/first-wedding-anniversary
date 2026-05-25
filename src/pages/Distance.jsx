@@ -2,10 +2,10 @@ import Navbar from "../components/Navbar";
 
 import {
   Heart,
-  Plane,
-  Clock3,
-  MapPin,
 } from "lucide-react";
+
+/* IMPORT MAP IMAGE */
+import distanceMap from "../assets/distance.jpeg";
 
 const Distance = () => {
 
@@ -13,238 +13,174 @@ const Distance = () => {
 
     <div className="min-h-screen bg-[#f8ece7] overflow-hidden relative">
 
+      {/* Background Glow */}
+      <div className="absolute top-0 left-0 w-[300px] h-[300px] bg-pink-200/20 rounded-full blur-3xl"></div>
+
+      <div className="absolute bottom-0 right-0 w-[300px] h-[300px] bg-[#7a1020]/10 rounded-full blur-3xl"></div>
+
       {/* Navbar */}
-      <Navbar />
+      <div className="relative z-20">
+        <Navbar />
+      </div>
 
       {/* Main */}
-      <div className="pt-32 px-5 md:px-20 pb-20">
+      <div className="relative z-10 pt-28 md:pt-32 px-5 md:px-20 pb-20">
 
         {/* Heading */}
         <div className="text-center">
 
-          <h1 className="title-font text-5xl md:text-7xl text-[#7a1020]">
+          <h1
+            className="
+              title-font
+              text-[#7a1020]
+
+              text-4xl
+              md:text-7xl
+
+              leading-tight
+            "
+          >
             Miles Apart,
             <br />
             Hearts Together
           </h1>
 
-          <div className="flex justify-center mt-5">
+          {/* Divider */}
+          <div className="flex items-center justify-center gap-4 mt-5">
+
+            <div className="w-16 md:w-24 h-[1px] bg-[#7a1020]/30"></div>
 
             <Heart
               size={18}
               className="fill-[#7a1020] text-[#7a1020]"
             />
+
+            <div className="w-16 md:w-24 h-[1px] bg-[#7a1020]/30"></div>
           </div>
         </div>
 
-        {/* Map Section */}
-        <div className="relative mt-20 max-w-6xl mx-auto">
+        {/* MAP IMAGE */}
+        <div className="mt-16 flex justify-center">
 
-          <div className="bg-[#f3e3dc] rounded-[40px] p-10 md:p-16 shadow-2xl border border-white/50 relative overflow-hidden">
+          <div
+            className="
+              w-full
+              max-w-5xl
+
+              bg-[#f3e3dc]
+
+              rounded-[40px]
+
+              p-6
+              md:p-10
+
+              shadow-2xl
+              border
+              border-white/40
+            "
+          >
 
             <img
-              src="https://upload.wikimedia.org/wikipedia/commons/8/80/World_map_-_low_resolution.svg"
-              alt=""
-              className="w-full opacity-20"
-            />
+              src={distanceMap}
+              alt="Distance Map"
 
-            <div className="absolute left-[18%] top-[45%] md:left-[25%] md:top-[42%] text-center">
-
-              <Heart
-                size={18}
-                className="fill-[#7a1020] text-[#7a1020] mx-auto"
-              />
-
-              <h2 className="mt-2 text-[#7a1020] font-semibold text-lg">
-                India
-              </h2>
-
-              <p className="text-sm text-[#5c3b3b]">
-                Chennai
-              </p>
-            </div>
-
-            <div className="absolute right-[18%] top-[38%] md:right-[25%] md:top-[38%] text-center">
-
-              <Heart
-                size={18}
-                className="fill-[#7a1020] text-[#7a1020] mx-auto"
-              />
-
-              <h2 className="mt-2 text-[#7a1020] font-semibold text-lg">
-                Dubai
-              </h2>
-
-              <p className="text-sm text-[#5c3b3b]">
-                UAE
-              </p>
-            </div>
-
-            <div className="hidden md:block absolute left-[32%] top-[45%] w-[35%] border-t-2 border-dashed border-[#7a1020]/40 rotate-[-8deg]"></div>
-
-            <Plane
-              size={32}
-              className="hidden md:block absolute left-[50%] top-[38%] text-[#7a1020]"
+              className="
+                w-full
+                h-auto
+                object-contain
+              "
             />
           </div>
         </div>
 
-        {/* Map Section */}
-{/* <div className="mt-20 flex justify-center">
+        {/* DISTANCE CARD */}
+        <div className="max-w-2xl mx-auto mt-14">
 
-  <div className="relative w-full max-w-4xl h-[220px]">
+          <div
+            className="
+              bg-white/70
+              backdrop-blur-xl
+              rounded-[30px]
+              p-8
+              shadow-2xl
+              border
+              border-white/40
+              text-center
+            "
+          >
 
-    <div className="absolute left-0 bottom-0 text-center">
-
-      <img
-        src="https://i.imgur.com/Y6a7R6m.png"
-        alt=""
-        className="w-40 opacity-25"
-      />
-
-      <div className="absolute top-10 left-16">
-
-        <Heart
-          size={18}
-          className="fill-[#7a1020] text-[#7a1020] mx-auto"
-        />
-
-        <h2 className="mt-1 text-3xl font-semibold text-[#3d1f1f] heading-font">
-          India
-        </h2>
-
-        <p className="text-[#5c3b3b] text-sm">
-          New Delhi
-        </p>
-      </div>
-    </div>
-
-    <div className="absolute right-0 top-0 text-center">
-
-      <img
-        src="https://i.imgur.com/Z1K8l0P.png"
-        alt=""
-        className="w-40 opacity-25"
-      />
-
-      <div className="absolute top-10 right-14">
-
-        <Heart
-          size={18}
-          className="fill-[#7a1020] text-[#7a1020] mx-auto"
-        />
-
-        <h2 className="mt-1 text-3xl font-semibold text-[#3d1f1f] heading-font">
-          Dubai
-        </h2>
-
-        <p className="text-[#5c3b3b] text-sm">
-          UAE
-        </p>
-      </div>
-    </div>
-
-    <svg
-      className="absolute inset-0 w-full h-full"
-      viewBox="0 0 1000 300"
-      fill="none"
-    >
-
-      <path
-        d="M230 170 Q500 20 770 140"
-        stroke="#7a1020"
-        strokeWidth="3"
-        strokeDasharray="10 10"
-        opacity="0.45"
-        fill="transparent"
-      />
-    </svg>
-
-    <Plane
-      size={42}
-      className="absolute left-1/2 top-[30%] -translate-x-1/2 text-[#7a1020] rotate-[15deg]"
-    />
-  </div>
-</div> */}
-
-        {/* Distance Cards */}
-        <div className="grid md:grid-cols-3 gap-8 mt-14 max-w-5xl mx-auto">
-
-          {/* Distance */}
-          <div className="bg-white/70 backdrop-blur-xl rounded-[30px] p-8 shadow-2xl border border-white/40 text-center">
-
-            <MapPin
-              size={32}
-              className="mx-auto text-[#7a1020]"
-            />
-
-            <h2 className="mt-5 text-2xl heading-font text-[#7a1020]">
+            <p className="text-[#5c3b3b] text-lg">
               Distance Between Us
+            </p>
+
+            <h2
+              className="
+                mt-4
+                title-font
+                text-[#7a1020]
+
+                text-5xl
+                md:text-6xl
+              "
+            >
+              2,588 km
             </h2>
 
-            <p className="mt-4 text-5xl title-font text-[#7a1020]">
-              2,588
-            </p>
-
-            <p className="mt-2 text-[#5c3b3b]">
-              Kilometers
-            </p>
-          </div>
-
-          {/* Reunion */}
-          <div className="bg-white/70 backdrop-blur-xl rounded-[30px] p-8 shadow-2xl border border-white/40 text-center">
-
-            <Heart
-              size={32}
-              className="mx-auto fill-[#7a1020] text-[#7a1020]"
-            />
-
-            <h2 className="mt-5 text-2xl heading-font text-[#7a1020]">
-              Next Reunion
-            </h2>
-
-            <p className="mt-4 text-5xl title-font text-[#7a1020]">
-              126
-            </p>
-
-            <p className="mt-2 text-[#5c3b3b]">
-              Days Remaining ♡
-            </p>
-          </div>
-
-          {/* Love */}
-          <div className="bg-white/70 backdrop-blur-xl rounded-[30px] p-8 shadow-2xl border border-white/40 text-center">
-
-            <Clock3
-              size={32}
-              className="mx-auto text-[#7a1020]"
-            />
-
-            <h2 className="mt-5 text-2xl heading-font text-[#7a1020]">
-              Time Difference
-            </h2>
-
-            <p className="mt-4 text-5xl title-font text-[#7a1020]">
-              1.5h
-            </p>
-
-            <p className="mt-2 text-[#5c3b3b]">
-              But always connected
+            <p className="mt-3 text-[#5c3b3b]">
+              But love knows no distance.
             </p>
           </div>
         </div>
 
-        {/* Time Cards */}
-        <div className="grid md:grid-cols-2 gap-8 mt-12 max-w-3xl mx-auto">
+        {/* TIME CARDS */}
+        <div
+          className="
+            grid
+            grid-cols-2
+            gap-5
 
-          {/* India Time */}
-          <div className="bg-white/70 backdrop-blur-xl rounded-[30px] p-8 shadow-2xl border border-white/40 text-center">
+            mt-10
+            max-w-2xl
+            mx-auto
+          "
+        >
 
-            <h2 className="text-2xl heading-font text-[#7a1020]">
+          {/* INDIA */}
+          <div
+            className="
+              bg-white/70
+              backdrop-blur-xl
+              rounded-[25px]
+              p-6
+              shadow-2xl
+              border
+              border-white/40
+              text-center
+            "
+          >
+
+            <h2
+              className="
+                text-[#7a1020]
+                heading-font
+
+                text-xl
+                md:text-2xl
+              "
+            >
               India
             </h2>
 
-            <p className="mt-5 text-5xl title-font text-[#7a1020]">
+            <p
+              className="
+                mt-5
+                title-font
+                text-[#7a1020]
+
+                text-3xl
+                md:text-5xl
+              "
+            >
               08:30 PM
             </p>
 
@@ -253,14 +189,42 @@ const Distance = () => {
             </p>
           </div>
 
-          {/* Dubai Time */}
-          <div className="bg-white/70 backdrop-blur-xl rounded-[30px] p-8 shadow-2xl border border-white/40 text-center">
+          {/* DUBAI */}
+          <div
+            className="
+              bg-white/70
+              backdrop-blur-xl
+              rounded-[25px]
+              p-6
+              shadow-2xl
+              border
+              border-white/40
+              text-center
+            "
+          >
 
-            <h2 className="text-2xl heading-font text-[#7a1020]">
+            <h2
+              className="
+                text-[#7a1020]
+                heading-font
+
+                text-xl
+                md:text-2xl
+              "
+            >
               Dubai
             </h2>
 
-            <p className="mt-5 text-5xl title-font text-[#7a1020]">
+            <p
+              className="
+                mt-5
+                title-font
+                text-[#7a1020]
+
+                text-3xl
+                md:text-5xl
+              "
+            >
               07:00 PM
             </p>
 
